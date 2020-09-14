@@ -19,7 +19,7 @@ https://github.com/kubernetes/helm/blob/master/pkg/chartutil/create.go
 ## Installation
 
 ```bash
-$ git clone https://github.com/halkeye/helm-chart ${HOME}/.helm/starters/halkeye/chart
+$ git clone https://github.com/halkeye/helm-chart-starter ${HOME}/.helm/starters/halkeye/chart
 ```
 
 ## Updates

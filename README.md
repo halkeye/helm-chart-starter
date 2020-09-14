@@ -19,7 +19,7 @@ https://github.com/kubernetes/helm/blob/master/pkg/chartutil/create.go
 ## Installation
 
 ```bash
-$ git clone https://github.com/halkeye/helm-chart-starter ${HOME}/.helm/starters/halkeye/chart
+$ git clone https://github.com/halkeye/helm-chart-starter ${HOME}/.local/share/helm/starters/halkeye/charts
 ```
 
 ## Updates
@@ -27,7 +27,7 @@ $ git clone https://github.com/halkeye/helm-chart-starter ${HOME}/.helm/starters
 If you need to fetch the newer version, cd into the directory and run the git pull.
 
 ```bash
-$ cd ${HOME}/.helm/starters/halkeye/chart
+$ cd ${HOME}/.local/share/helm/starters/halkeye/charts
 $ git pull
 ```
 

@@ -39,6 +39,18 @@ service:
   type: ClusterIP
   port: 9000
 
+probes:
+  liveness:
+    failureThreshold: 5
+    periodSeconds: 10
+  readiness:
+    failureThreshold: 5
+    periodSeconds: 10
+  startup:
+    initialDelaySeconds: 5
+    failureThreshold: 30
+    periodSeconds: 10
+
 config: {}
 
 ingress:

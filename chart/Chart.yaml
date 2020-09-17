@@ -15,9 +15,10 @@ appVersion: "latest"
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 version: 0.0.1
+name: <CHARTNAME>
 description: "__DESCRIPTION__"
 keywords:
-  - "__CHART__"
+  - "<CHARTNAME>"
 home: "__HOMEPAGE__"
 sources:
   - "__SOURCE_URL__"

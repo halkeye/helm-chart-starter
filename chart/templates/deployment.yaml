@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "__CHART__.fullname" . }}
+  name: {{ include "<CHARTNAME>.fullname" . }}
   labels:
-{{ include "__CHART__.labels" . | indent 4 }}
+{{ include "<CHARTNAME>.labels" . | indent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
 {{- if .Values.strategy }}
@@ -15,17 +15,17 @@ spec:
 {{- end }}
   selector:
     matchLabels:
-      {{- include "__CHART__.selectorLabels" . | nindent 6 }}
+      {{- include "<CHARTNAME>.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "__CHART__.selectorLabels" . | nindent 8 }}
+        {{- include "<CHARTNAME>.selectorLabels" . | nindent 8 }}
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-      serviceAccountName: {{ template "__CHART__.serviceAccountName" . }}
+      serviceAccountName: {{ template "<CHARTNAME>.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       {{- if .Values.dnsConfig }}
@@ -59,7 +59,7 @@ spec:
       - name: data
       {{- if .Values.persistence.enabled }}
         persistentVolumeClaim:
-          claimName: {{ if .Values.persistence.existingClaim }}{{ .Values.persistence.existingClaim }}{{- else }}{{ template "__CHART__.fullname" . }}{{- end }}
+          claimName: {{ if .Values.persistence.existingClaim }}{{ .Values.persistence.existingClaim }}{{- else }}{{ template "<CHARTNAME>.fullname" . }}{{- end }}
       {{- else }}
         emptyDir: {}
       {{- end }}

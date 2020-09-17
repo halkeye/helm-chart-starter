@@ -39,15 +39,6 @@ Helm allows the usage of a "template" chart when creating other charts, as follo
 $ helm create ${CHART_NAME} --starter=halkeye/chart
 ```
 
-This lets us "pre-populate" a chart with much of the boilerplate that is repeated across all projects. Anything that
-we know to be unique has a placeholder of the format `__PLACEHOLDER__`, and anything that needs further attention
-once the chart has been generated should have a `todo` and extensive documentation.
+## Placeholders
 
-Not all documentation has been finished.
-
-A list of the `__` placeholders and their intended purpose is below:
-
-* `__NAME__`: The human readable name of the chart of the form `/A-Za-z-_ /` e.g. `Sitewards GmbH`
-* `__CHART__`: The reference of the chart of the form `/a-z/` e.g. `linkerd`.
-* `__CONTAINER_NAME__`:  The name of the application container of the form `a-z` e.g. `kubectl`
-* `__CONTAINER_IMAGE__`: The image ref of the container to be used of the form `/a-z.\//-_` e.g. `quay.io/littlemanco/apache-php`
+* `<CHARTNAME>`: The reference of the chart of the form `/a-z/` e.g. `linkerd`.

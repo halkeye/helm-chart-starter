@@ -98,4 +98,6 @@ persistence:
   accessModes:
     - ReadWriteMany
   size: 1Gi
+  ## Do not delete the pvc upon helm uninstall
+  skipuninstall: false
 

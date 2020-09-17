@@ -83,6 +83,10 @@ tolerations: []
 
 affinity: {}
 
+podAnnotations: {}
+
+deploymentAnnotations: {}
+
 ## Persist configuration to a persistent volume
 persistence:
   # persistence.enabled - Should disk persistence be enabled

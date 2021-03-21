@@ -28,3 +28,10 @@ engine: gotpl
 maintainers:
   - name: Gavin Mogan
     email: helm@gavinmogan.com
+annotations:
+  artifacthub.io/changes: |
+    - This is what changed in this version
+  artifacthub.io/containsSecurityUpdates: "false"
+  artifacthub.io/images: |
+    - name: nginx
+      image: nginx:2.4.2

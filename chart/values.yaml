@@ -100,8 +100,8 @@ persistence:
   existingClaim: ""
   storageClassName: ""
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   size: 1Gi
-  ## Do not delete the pvc upon helm uninstall
+  ## persistence.skipuninstall -- Do not delete the pvc upon helm uninstall
   skipuninstall: false
 

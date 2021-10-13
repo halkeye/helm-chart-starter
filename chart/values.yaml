@@ -55,7 +55,10 @@ config: {}
 
 ingress:
   enabled: false
-  annotations: {}
+  ## ingress.ingressClassName -- Support for ingress class name that was introduced in kubernetes 1.19
+  ingressClassName:
+  annotations:
+    {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
